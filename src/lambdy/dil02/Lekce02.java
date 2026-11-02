@@ -10,7 +10,7 @@ public class Lekce02 {
     public static void main(String[] args) {
         // Odkomentuj prave jedno volani podle pracovniho snimku.
         // Prvni spusteni je bez vypisu; zatim neni zapnuta zadna uloha.
-        // ukazkaSoucet();
+        ukazkaSoucet();
         // ukazkaSlova();
         // ukazkaDuplicity();
         // delkySlov();
@@ -23,6 +23,8 @@ public class Lekce02 {
             sum += i;
         }
         System.out.println(sum);
+        int streamSum = IntStream.rangeClosed(1, 100).sum();
+        System.out.println(streamSum);
         // TODO ukazka: postupuj podle pracovniho snimku.
     }
 
@@ -30,6 +32,14 @@ public class Lekce02 {
     static void ukazkaSlova() {
         List<String> words = List.of("Ahoj", "svete", "", "Afrika", "Java");
         // TODO ukazka: postupuj podle pracovniho snimku.
+        for (String word : words) {
+            if (word.startsWith("A")) {
+                System.out.println(word);
+            }
+        }
+        words.stream()
+                .filter(word -> word.startsWith("A"))
+                .forEach(word -> System.out.println(word));
     }
 
     // Spolecna ukazka: podle pokynu v prezentaci.

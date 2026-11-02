@@ -15,7 +15,7 @@ public class Lekce01 {
         spojeni();
         kalkulacka();
         porovnaniDelek();
-        // formatovani();
+        formatovani();
     }
 
     // Spolecna ukazka: podle pokynu v prezentaci.
